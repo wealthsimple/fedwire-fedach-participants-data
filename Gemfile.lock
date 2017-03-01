@@ -1,0 +1,33 @@
+GIT
+  remote: https://github.com/ryanwood/slither
+  revision: 268fde22ebb756b154abdd3fa1e9f7fc7badf035
+  specs:
+    slither (0.99.5)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activesupport (5.0.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    concurrent-ruby (1.0.5)
+    i18n (0.8.1)
+    minitest (5.10.1)
+    thread_safe (0.3.6)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activesupport
+  slither!
+
+RUBY VERSION
+   ruby 2.3.3p222
+
+BUNDLED WITH
+   1.14.3
