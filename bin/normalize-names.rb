@@ -13,6 +13,21 @@ end.uniq.sort
 # Institutions keyed by fedwire name.
 institutions = {}
 
+# Remove excess. Examples:
+# KANSAS STATE BANK => The Kansas State Bank (Scranton) => Kansas State Bank
+# ALLIANCE BANK CENTRAL TEXAS => Alliance Bank - Central Texas => Alliance Bank Central Texas
+def normalize_name(fedwire_name, plaid_name)
+  return plaid_name if plaid_name.size == fedwire_name.size
+
+  start_index = plaid_name.upcase.index(fedwire_name)
+  if !start_index
+    plaid_name.gsub!(" - ", " ")
+    start_index = plaid_name.upcase.index(fedwire_name)
+    return plaid_name if !start_index
+  end
+  plaid_name.slice(start_index, fedwire_name.size)
+end
+
 names.each_with_index do |name, i|
   puts "#{i+1}/#{names.size}: #{name}"
 
@@ -21,11 +36,8 @@ names.each_with_index do |name, i|
 
   # Only if there is one result, consider that to be an exact match.
   next  unless response.size == 1
-  institution = response.first
-  institutions[name] = {
-    name: institution["name"],
-    plaid_id: institution["id"],
-  }
+
+  institutions[name] = normalize_name(name, institution[:name])
 
   # Something reasonable to ensure we aren't overloading Plaid
   sleep 0.5
