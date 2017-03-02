@@ -6,7 +6,7 @@ For more details, see [Federal Reserve Bank Services: Download E-Payments Routin
 
 ## Data sample
 
-JSON:
+JSON: **[fedwire-participants.json](https://raw.githubusercontent.com/wealthsimple/fedwire-participants-data/master/fedwire-participants.json)**
 
 ```json
 {
@@ -34,7 +34,7 @@ JSON:
 }
 ```
 
-YAML:
+YAML: **[fedwire-participants.yml](https://raw.githubusercontent.com/wealthsimple/fedwire-participants-data/master/fedwire-participants.yml)**
 
 ```yaml
 ---
