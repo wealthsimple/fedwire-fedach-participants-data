@@ -22,7 +22,7 @@ Slither.define :fedwire_participants, by_bytes: false do |definition|
   end
 end
 
-parsed = Slither.parse("./vendor/test.txt", :fedwire_participants)[:body]
+parsed = Slither.parse("./vendor/fpddir.txt", :fedwire_participants)[:body]
 
 # Convert boolean fields from string => boolean
 parsed.map do |line|
