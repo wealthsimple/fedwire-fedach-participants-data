@@ -28,7 +28,7 @@ JSON: **[fedwire-participants.json](https://raw.githubusercontent.com/wealthsimp
     "funds_transfer_eligible":true,
     "settlement_only":false,
     "securities_transfer_eligible":false,
-    "revision_date":"20160526"
+    "revision_date":null
   },
   ...
 }
@@ -55,6 +55,6 @@ YAML: **[fedwire-participants.yml](https://raw.githubusercontent.com/wealthsimpl
   :funds_transfer_eligible: true
   :settlement_only: false
   :securities_transfer_eligible: false
-  :revision_date: '20160526'
+  :revision_date:
 ...
 ```
