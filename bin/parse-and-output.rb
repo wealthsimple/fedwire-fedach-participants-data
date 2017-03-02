@@ -29,6 +29,7 @@ parsed.map do |line|
   line[:funds_transfer_eligible] = line[:funds_transfer_eligible] == "Y"
   line[:settlement_only] = line[:settlement_only] == "S"
   line[:securities_transfer_eligible] = line[:securities_transfer_eligible] == "Y"
+  line[:revision_date] = line[:revision_date].presence
   line
 end
 
