@@ -1,6 +1,9 @@
 require "active_support/all"
 require "slither"
 require "pp"
+require "json"
+require "neatjson"
+require "yaml"
 
 # Format is defined at:
 # https://www.frbservices.org/EPaymentsDirectory/fedwireFormat.html
@@ -29,4 +32,11 @@ parsed.map do |line|
   line
 end
 
-pp parsed
+# Participants keyed by routing number.
+participants = {}
+parsed.each do |line|
+  participants[line[:routing_number]] = line.except(:routing_number)
+end
+
+File.write("./fedwire-participants.json", JSON.neat_generate(participants, wrap: 200, after_comma: 1))
+File.write("./fedwire-participants.yml", participants.to_yaml)

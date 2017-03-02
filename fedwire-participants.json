@@ -1,0 +1,42 @@
+{
+  "325182836":{
+    "telegraphic_name":"LOWER VALLEY CU WA",
+    "customer_name":"LOWER VALLEY CREDIT UNION",
+    "state":"WA",
+    "city":"SUNNYSIDE",
+    "funds_transfer_eligible":true,
+    "settlement_only":false,
+    "securities_transfer_eligible":true,
+    "revision_date":"20120702"
+  },
+  "325182946":{
+    "telegraphic_name":"UMPQUA BANK WA",
+    "customer_name":"UMPQUA BANK",
+    "state":"OR",
+    "city":"HILLSBORO",
+    "funds_transfer_eligible":true,
+    "settlement_only":false,
+    "securities_transfer_eligible":false,
+    "revision_date":"20160526"
+  },
+  "325183220":{
+    "telegraphic_name":"SOUND CU TAC",
+    "customer_name":"SOUND CREDIT UNION",
+    "state":"WA",
+    "city":"TACOMA",
+    "funds_transfer_eligible":true,
+    "settlement_only":false,
+    "securities_transfer_eligible":true,
+    "revision_date":"20120925"
+  },
+  "325183233":{
+    "telegraphic_name":"TAPCO CU TAC",
+    "customer_name":"TAPCO CREDIT UNION",
+    "state":"WA",
+    "city":"TACOMA",
+    "funds_transfer_eligible":true,
+    "settlement_only":true,
+    "securities_transfer_eligible":true,
+    "revision_date":"20140307"
+  }
+}
