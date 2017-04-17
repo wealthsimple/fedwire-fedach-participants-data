@@ -6,7 +6,7 @@ For more details, see [Federal Reserve Bank Services: Download E-Payments Routin
 
 ## Data samples
 
- **[fedwire-participants.json](https://raw.githubusercontent.com/wealthsimple/frb-participants/master/data/fedwire-participants.json)**
+ **[fedwire-participants.json](https://github.com/wealthsimple/frb-participants/blob/master/data/fedwire-participants.json)**
 
 ```json
 {
@@ -34,7 +34,7 @@ For more details, see [Federal Reserve Bank Services: Download E-Payments Routin
 }
 ```
 
- **[fedach-participants.json](https://raw.githubusercontent.com/wealthsimple/frb-participants/master/data/fedach-participants.json)**
+ **[fedach-participants.json](https://github.com/wealthsimple/frb-participants/blob/master/data/fedach-participants.json)**
 
 ```json
 {
