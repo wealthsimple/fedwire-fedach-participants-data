@@ -39,5 +39,5 @@ parsed.each do |line|
   participants[line[:routing_number]] = line.except(:routing_number)
 end
 
-File.write("./fedwire-participants.json", JSON.neat_generate(participants, wrap: 200, after_comma: 1))
-File.write("./fedwire-participants.yml", participants.to_yaml)
+File.write("./data/fedwire-participants.json", JSON.neat_generate(participants, wrap: 200, after_comma: 1))
+File.write("./data/fedwire-participants.yml", participants.to_yaml)

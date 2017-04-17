@@ -5,7 +5,7 @@ require "neatjson"
 require "yaml"
 require "rest-client"
 
-participants = YAML.load_file("./fedwire-participants.yml")
+participants = YAML.load_file("./data/fedwire-participants.yml")
 names = participants.map do |_, data|
   data[:customer_name]
 end.uniq.sort
@@ -43,5 +43,5 @@ names.each_with_index do |name, i|
   sleep 0.5
 end
 
-File.write("./institution-names.json", JSON.neat_generate(institutions, wrap: 200, after_comma: 1))
-File.write("./institution-names.yml", institutions.to_yaml)
+File.write("./data/institution-names.json", JSON.neat_generate(institutions, wrap: 200, after_comma: 1))
+File.write("./data/institution-names.yml", institutions.to_yaml)
