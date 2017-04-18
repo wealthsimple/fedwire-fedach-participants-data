@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.3.3'
 
 gem 'slither', git: 'https://github.com/ryanwood/slither'
-gem 'activesupport'
-gem 'neatjson'
-gem 'rest-client'
+
+# Specify your gem's dependencies in frb-participants.gemspec
+gemspec

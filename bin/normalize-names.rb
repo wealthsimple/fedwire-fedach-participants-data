@@ -43,5 +43,5 @@ names.each_with_index do |name, i|
   sleep 0.5
 end
 
-File.write("./data/institution-names.json", JSON.neat_generate(institutions, wrap: 200, after_comma: 1))
-File.write("./data/institution-names.yml", institutions.to_yaml)
+File.write("./data/plaid-institution-names.json", JSON.neat_generate(institutions, wrap: 200, after_comma: 1))
+File.write("./data/plaid-institution-names.yml", institutions.to_yaml)

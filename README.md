@@ -4,7 +4,58 @@ Provides data from the The Federal Reserve Banks' Fedwire & FedACH participants 
 
 For more details, see [Federal Reserve Bank Services: Download E-Payments Routing Directories](https://www.frbservices.org/EPaymentsDirectory/download.html)
 
-## Data samples
+## Rubygem:
+
+```ruby
+gem 'frb-participants', git: 'https://github.com/wealthsimple/frb-participants'
+```
+
+You can do basic queries of data:
+
+```ruby
+FrbParticipants::FedachParticipant.find_by_routing_number("322170016")
+=> #<OpenStruct
+      type=:ach,
+      customer_name="BANK OF AMERICA, N.A. - ARIZONA",
+      known_normalized_name="Bank of America",
+      best_attempt_normalized_name="Bank Of America, N.A. - Arizona"
+      office_type="main",
+      servicing_frb_number="121000374",
+      record_type_code="1",
+      revision_date="121503",
+      new_routing_number=nil,
+      address="VA2-430-01-01",
+      city="RICHMOND",
+      state="VA",
+      zip="23261",
+      zip_extension="7025",
+      telephone="8004460135">
+```
+
+```ruby
+FrbParticipants::FedwireParticipant.find_by_routing_number("325182946")
+=> #<OpenStruct
+      type=:wire,
+      telegraphic_name="UMPQUA BANK WA",
+      customer_name="UMPQUA BANK",
+      known_normalized_name=nil,
+      best_attempt_normalized_name="Umpqua Bank",
+      state="OR",
+      city="HILLSBORO",
+      funds_transfer_eligible=true,
+      settlement_only=false,
+      securities_transfer_eligible=false,
+      revision_date="20160526">
+```
+
+Important! If you are using this on a production service, it is recommended that you preload the data in an initializer:
+
+```ruby
+require 'frb-participants'
+FrbParticipants::Data.preload!
+```
+
+## Normalized data:
 
  **[fedwire-participants.json](https://github.com/wealthsimple/frb-participants/blob/master/data/fedwire-participants.json)**
 
