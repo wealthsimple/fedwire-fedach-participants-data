@@ -4,7 +4,28 @@ Provides data from the The Federal Reserve Banks' Fedwire & FedACH participants 
 
 For more details, see [Federal Reserve Bank Services: Download E-Payments Routing Directories](https://www.frbservices.org/EPaymentsDirectory/download.html)
 
-## Data samples
+## Rubygem:
+
+```ruby
+gem 'frb-participants', git: 'https://github.com/wealthsimple/frb-participants'
+```
+
+You can do basic queries of data:
+
+```ruby
+FrbParticipants::FedwireParticipant.find_by_routing_number("325182946")
+=> #<OpenStruct
+      telegraphic_name="UMPQUA BANK WA",
+      customer_name="UMPQUA BANK",
+      state="OR",
+      city="HILLSBORO",
+      funds_transfer_eligible=true,
+      settlement_only=false,
+      securities_transfer_eligible=false,
+      revision_date="20160526">
+```
+
+## Normalized data:
 
  **[fedwire-participants.json](https://github.com/wealthsimple/frb-participants/blob/master/data/fedwire-participants.json)**
 
