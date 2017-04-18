@@ -45,6 +45,9 @@ GEM
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
     rspec-mocks (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
@@ -66,6 +69,7 @@ DEPENDENCIES
   rake (~> 10.0)
   rest-client
   rspec (~> 3.0)
+  rspec-its
   slither!
 
 BUNDLED WITH
