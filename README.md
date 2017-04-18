@@ -7,7 +7,7 @@ For more details, see [Federal Reserve Bank Services: Download E-Payments Routin
 ## Rubygem:
 
 ```ruby
-gem 'frb-participants', git: 'https://github.com/wealthsimple/frb-participants'
+gem 'frb-participants'
 ```
 
 You can do basic queries of data:
