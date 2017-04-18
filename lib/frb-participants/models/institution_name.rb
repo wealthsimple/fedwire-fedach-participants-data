@@ -6,7 +6,7 @@ module FrbParticipants
     end
 
     def self.data
-      @@data ||= YAML.load_file("./data/institution-names.yml")
+      @@data ||= FrbParticipants::Data.load("institution-names.yml")
     end
   end
 end
