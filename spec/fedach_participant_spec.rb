@@ -5,6 +5,14 @@ describe FrbParticipants::FedachParticipant do
 
       its(:customer_name) { is_expected.to eq("FEDERAL RESERVE BANK") }
       its(:type) { is_expected.to eq(:ach) }
+      its(:normalized_name) { is_expected.to be_nil }
+    end
+
+    context "routing number exists, and has normalized_name" do
+      subject { described_class.find_by_routing_number("075909204") }
+
+      its(:customer_name) { is_expected.to eq("BANK OF PRAIRIE DU SAC") }
+      its(:normalized_name) { is_expected.to eq("Bank of Prairie du Sac") }
     end
 
     context "routing number doesn't exist" do
