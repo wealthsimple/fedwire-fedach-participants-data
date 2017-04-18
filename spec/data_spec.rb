@@ -6,7 +6,7 @@ describe FrbParticipants::Data do
   end
 
   describe ".load" do
-    subject { described_class.load("institution-names.yml") }
+    subject { described_class.load("plaid-institution-names.yml") }
 
     it { is_expected.to be_a(Hash) }
   end

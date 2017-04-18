@@ -6,7 +6,15 @@ module FrbParticipants
     end
 
     def self.data
-      @@data ||= FrbParticipants::Data.load("institution-names.yml")
+      @@institution_name_data ||= plaid_data.merge(manual_data)
+    end
+
+    def self.plaid_data
+      @@plaid_data ||= FrbParticipants::Data.load("plaid-institution-names.yml")
+    end
+
+    def self.manual_data
+      @@manual_data ||= FrbParticipants::Data.load("manually-normalized-institution-names.yml")
     end
   end
 end
