@@ -1,4 +1,4 @@
-# frb-participants [![CircleCI](https://circleci.com/gh/wealthsimple/frb-participants.svg?style=svg)](https://circleci.com/gh/wealthsimple/frb-participants)
+# frb-participants [![CircleCI](https://circleci.com/gh/wealthsimple/frb-participants.svg?style=svg)](https://circleci.com/gh/wealthsimple/frb-participants) [![](https://img.shields.io/gem/v/frb-participants.svg)](https://rubygems.org/gems/frb-participants)
 
 Provides data from the The Federal Reserve Banks' Fedwire & FedACH participants in JSON format, mapping routing number to associated bank name and branch info.
 
