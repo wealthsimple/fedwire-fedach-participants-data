@@ -28,4 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec-its"
   spec.add_development_dependency "neatjson"
   spec.add_development_dependency "rest-client"
+  spec.add_development_dependency "pry"
 end
