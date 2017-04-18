@@ -7,7 +7,8 @@ module FrbParticipants
     end
 
     def self.load(file_name)
-      YAML.load_file("./data/#{file_name}")
+      path = File.join(File.dirname(File.expand_path(__FILE__)), "../../data/#{file_name}")
+      YAML.load_file(path)
     end
   end
 end
