@@ -1,8 +1,15 @@
 module FrbParticipants
   class InstitutionName
     def self.find_by_frb_name(frb_name)
-      normalized_name = data[frb_name]
-      OpenStruct.new(frb_name: frb_name, normalized_name: normalized_name) if normalized_name
+      attributes = {
+        frb_name: frb_name,
+        known_normalized_name: data[frb_name],
+      }
+      if attributes[:known_normalized_name].nil?
+        # Attempt to automatically capitalize name correctly.
+        attributes[:best_attempt_normalized_name] = frb_name.split('-').map(&:titleize).join('-')
+      end
+      OpenStruct.new(attributes)
     end
 
     def self.data

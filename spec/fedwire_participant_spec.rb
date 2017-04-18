@@ -5,14 +5,14 @@ describe FrbParticipants::FedwireParticipant do
 
       its(:customer_name) { is_expected.to eq("UMPQUA BANK") }
       its(:type) { is_expected.to eq(:wire) }
-      its(:normalized_name) { is_expected.to be_nil }
+      its(:known_normalized_name) { is_expected.to be_nil }
     end
 
-    context "routing number exists, and has normalized_name" do
+    context "routing number exists, and has known_normalized_name" do
       subject { described_class.find_by_routing_number("084202264") }
 
       its(:customer_name) { is_expected.to eq("BANKPLUS") }
-      its(:normalized_name) { is_expected.to eq("BankPlus") }
+      its(:known_normalized_name) { is_expected.to eq("BankPlus") }
     end
 
     context "routing number doesn't exist" do

@@ -4,10 +4,11 @@ module FrbParticipants
       participant_attributes = data[routing_number]
       if participant_attributes
         type = participant_attributes.has_key?(:settlement_only) ? :wire : :ach
-        normalized_name = FrbParticipants::InstitutionName.find_by_frb_name(participant_attributes[:customer_name])&.normalized_name
+        institution_name = FrbParticipants::InstitutionName.find_by_frb_name(participant_attributes[:customer_name])
         OpenStruct.new(participant_attributes.merge(
           type: type,
-          normalized_name: normalized_name,
+          known_normalized_name: institution_name.known_normalized_name,
+          best_attempt_normalized_name: institution_name.best_attempt_normalized_name,
         ))
       end
     end
