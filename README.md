@@ -25,6 +25,13 @@ FrbParticipants::FedwireParticipant.find_by_routing_number("325182946")
       revision_date="20160526">
 ```
 
+Important! If you are using this on a production service, it is recommended that you preload the data in an initializer:
+
+```ruby
+require 'frb-participants'
+FrbParticipants::Data.preload!
+```
+
 ## Normalized data:
 
  **[fedwire-participants.json](https://github.com/wealthsimple/frb-participants/blob/master/data/fedwire-participants.json)**
