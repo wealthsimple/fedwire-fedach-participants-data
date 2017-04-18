@@ -1,6 +1,6 @@
 # frb-participants [![CircleCI](https://circleci.com/gh/wealthsimple/frb-participants.svg?style=svg)](https://circleci.com/gh/wealthsimple/frb-participants) [![](https://img.shields.io/gem/v/frb-participants.svg)](https://rubygems.org/gems/frb-participants)
 
-Provides data from the The Federal Reserve Banks' Fedwire & FedACH participants in JSON format, mapping routing number to associated bank name and branch info.
+Provides data from the The Federal Reserve Banks' Fedwire & FedACH participants in JSON format, mapping routing number to associated bank name and branch info. It also provides a Rubygem for querying this data by routing number.
 
 For more details, see [Federal Reserve Bank Services: Download E-Payments Routing Directories](https://www.frbservices.org/EPaymentsDirectory/download.html)
 
@@ -56,6 +56,8 @@ FrbParticipants::Data.preload!
 ```
 
 ## Normalized data:
+
+If you don't use Ruby, or only need access to the normalized data, this is available in the `/data/` directory. Below are small previews of how this data is structured for each file:
 
  **[fedwire-participants.json](https://github.com/wealthsimple/frb-participants/blob/master/data/fedwire-participants.json)**
 
